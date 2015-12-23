@@ -1,3 +1,15 @@
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+   -khtml-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
 //Animation
 @mixin animation($value...) {
 	-webkit-animation: $value;
@@ -19,6 +31,7 @@
 @mixin box-sizing($value...) {
 	-webkit-box-sizing: $value;
   	-moz-box-sizing: $value;
+  	-ms-box-sizing: $value;
   	box-sizing: $value;
 }
 
