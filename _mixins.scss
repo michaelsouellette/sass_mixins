@@ -12,35 +12,22 @@
 
 //Animation
 @mixin animation($value...) {
-	-webkit-animation: $value;
-	-moz-animation: $value;
-	-ms-animation: $value;
-	-o-animation: $value;
-	animation: $value;
+	@include css3-prefix('animation', $value);
 }
 
 //Border radius
 @mixin border-radius($size) {
-	-moz-border-radius: $size;
-    -webkit-border-radius: $size;
-    -khtml-border-radius: $size;
-    border-radius: $size;
+    @include css3-prefix('border-radius', $size);
 }
 
 //Box Sizing
 @mixin box-sizing($value...) {
-	-webkit-box-sizing: $value;
-  	-moz-box-sizing: $value;
-  	-ms-box-sizing: $value;
-  	box-sizing: $value;
+  	@include css3-prefix('box-sizing', $value);
 }
 
 //Box Shadow
 @mixin box-shadow($shadow-value...) {
-	-webkit-box-shadow: $shadow-value;
-	-moz-box-shadow: $shadow-value;
-	-ms-box-shadow: $shadow-value;
-	box-shadow: $shadow-value;
+	@include css3-prefix('box-shadow', $shadow-value);
 }
 
 //Linear gradient 
@@ -54,29 +41,17 @@
 
 //Transform
 @mixin transform($value...) {
-	-webkit-transform: $value;
-    -moz-transform: $value;
-    -o-transform: $value;
-    -ms-transform: $value;
-    transform: $value;
+    @include css3-prefix('transform', $value);
 }
 
 //Transition
 @mixin transition($value) {
-	-webkit-transition: $value;
-    -moz-transition: $value;
-    -ms-transition: $value;
-    -o-transition: $value;
-    transition: $value;
+    @include css3-prefix('transition', $value);
 }
 
 //User Select
 @mixin user-select($value) {
-	-moz-user-select: -moz-$value;
-    -khtml-user-select: $value;
-    -webkit-user-select: $value;
-    -ms-user-select: $value;
-    user-select: $value;
+    @include css3-prefix('user-select', $value);
 }
 
 //Media Queries
