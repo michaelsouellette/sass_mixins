@@ -15,9 +15,27 @@
 	@include css3-prefix('animation', $value);
 }
 
-//Border radius
+//Border Radius
 @mixin border-radius($size) {
     @include css3-prefix('border-radius', $size);
+}
+
+//Border Radius Seperates
+@mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+  -webkit-border-top-left-radius:     $topLeftRadius;
+  -webkit-border-top-right-radius:    $topRightRadius;
+  -webkit-border-bottom-right-radius: $bottomRightRadius;
+  -webkit-border-bottom-left-radius:  $bottomLeftRadius;
+
+  -moz-border-radius-topleft:     $topLeftRadius;
+  -moz-border-radius-topright:    $topRightRadius;
+  -moz-border-radius-bottomright: $bottomRightRadius;
+  -moz-border-radius-bottomleft:  $bottomLeftRadius;
+
+  border-top-left-radius:     $topLeftRadius;
+  border-top-right-radius:    $topRightRadius;
+  border-bottom-right-radius: $bottomRightRadius;
+  border-bottom-left-radius:  $bottomLeftRadius;
 }
 
 //Box Sizing
@@ -30,6 +48,11 @@
 	@include css3-prefix('box-shadow', $shadow-value);
 }
 
+//Flex
+@mixin flex($value: 1) {
+  @include css3-prefix('box-flex', $value);
+}
+
 //Linear gradient 
 @mixin linear-gradient($color...) {
 	background: $color;
@@ -37,6 +60,11 @@
     background: -o-linear-gradient($color);
     background: -moz-linear-gradient($color);
     background: linear-gradient($color);
+}
+
+//Text Shadow
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
 }
 
 //Transform
