@@ -10,6 +10,21 @@
           #{$property}: #{$value};
 }
 
+//Align Content
+@mixin align-content($value) {
+	@include css3-prefix('align-content', $value);
+}
+
+//Align Items
+@mixin align-items($value) {
+	@include css3-prefix('align-items', $value);
+}
+
+//Align Self
+@mixin align-self($value) {
+	@include css3-prefix('align-self', $value);
+}
+
 //Animation
 @mixin animation($value...) {
 	@include css3-prefix('animation', $value);
@@ -48,11 +63,6 @@
 	@include css3-prefix('box-shadow', $shadow-value);
 }
 
-//Flex
-@mixin flex($value: 1) {
-  @include css3-prefix('box-flex', $value);
-}
-
 //Linear gradient 
 @mixin linear-gradient($color...) {
 	background: $color;
@@ -80,6 +90,53 @@
 //User Select
 @mixin user-select($value) {
     @include css3-prefix('user-select', $value);
+}
+
+//Flex Box
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+//Flex
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+//Flex Direction
+@mixin flex-direction($value) {
+	@include css3-prefix('flex-direction', $value);
+}
+
+//Flex Flow
+@mixin flex-flow($values) {
+	@include css3-prefix('flex-flow', $values);
+}
+
+//Flex Justify Content
+@mixin justify-content($values) {
+	@include css3-prefix('justify-content', $values);
+}
+
+//Flex Order
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+//Flex Wrap
+@mixin flex-wrap($value) {
+	@include css3-prefix('flex-wrap', $value);
 }
 
 //Media Queries
