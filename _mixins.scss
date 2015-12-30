@@ -83,7 +83,7 @@
 }
 
 //Transition
-@mixin transition($value) {
+@mixin transition($value...) {
     @include css3-prefix('transition', $value);
 }
 
