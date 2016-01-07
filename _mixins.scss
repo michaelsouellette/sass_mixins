@@ -30,6 +30,11 @@
 	@include css3-prefix('animation', $value);
 }
 
+//Animation Delay
+@mixin animation-delay($value...) {
+	@include css3-prefix('animation-delay', $value);
+}
+
 //Backface-Visibility
 @mixin backface-visibility($value) {
 	@include css3-prefix('backface-visibility', $value);
@@ -90,6 +95,11 @@
 //Transform
 @mixin transform($value...) {
     @include css3-prefix('transform', $value);
+}
+
+//Transform-Origin
+@mixin transform-origin($value...) {
+    @include css3-prefix('transform-origin', $value);
 }
 
 //Transform-Style
