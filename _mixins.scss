@@ -30,6 +30,11 @@
 	@include css3-prefix('animation', $value);
 }
 
+//Backface-Visibility
+@mixin backface-visibility($value) {
+	@include css3-prefix('backface-visibility', $value);
+}
+
 //Border Radius
 @mixin border-radius($size) {
     @include css3-prefix('border-radius', $size);
@@ -72,6 +77,11 @@
     background: linear-gradient($color);
 }
 
+//Perspective
+@mixin perspective($value...) {
+    @include css3-prefix('perspective', $value);
+}
+
 //Text Shadow
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
     text-shadow: $x $y $blur $color;
@@ -80,6 +90,11 @@
 //Transform
 @mixin transform($value...) {
     @include css3-prefix('transform', $value);
+}
+
+//Transform-Style
+@mixin transform-style($value...) {
+    @include css3-prefix('transform-style', $value);
 }
 
 //Transition
