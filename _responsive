@@ -1,0 +1,141 @@
+//Media Queries
+//Screen orientation mixin
+@mixin orientation($point) {
+	@if $point == portrait {
+		@media all and (orientation:portrait) {
+			@content;
+		}
+	}
+
+	@if $point == landscape {
+		@media all and (orientation:landscape) {
+			@content;
+		}
+	}
+}
+
+//Screen sizes
+@mixin bp($points) {
+    @each $point in $points {
+      @include the-points($point){
+      	@content
+      };
+    }
+}
+
+@mixin the-points($point) {
+	$bp-large-screen: 1824px;
+	$bp-bigscreen: 1824px;
+	$bp-nexus10-max: 1280px;
+	$bp-nexus10-min: 800px;
+	$bp-ipad-max: 1024px;
+	$bp-ipad-min: 768px;
+	$bp-iphone5-max: 568px;
+	$bp-iphone-max: 480px;
+	$bp-iphone-min: 320px;
+	// **
+	// --------------------
+	// Options of screen breakpoints:
+	// 1. large-screen - from 1824px
+	// 2. big-screen - to 1824px
+	// 3. nexus10 - from 1024px to 1280px
+	// 4. nexus10-portrait - to 800px;
+	// 5. ipad-mini - to 768px
+	// 6. ipad - from 768px to 1024px
+	// 7. ipad-portrait - to 768px
+	// 8. iphone6-landscape - to 768px
+	// 9. iphone5-landscape - to 568px
+	// 10. iphone - from 320px to 480px
+	// 11. iphone-portrait - to 320px
+	// --------------------
+	// **
+	@if $point == large-screen {
+	  @media // Very Large Screens
+	  only screen and (min-width: #{$bp-large-screen}),
+	  only screen and (min-device-width: #{$bp-large-screen}) {
+	    @content;
+	  }
+	}
+	@if $point == big-screen {
+	  @media // Desktops and Laptops
+	  only screen and (max-width: #{$bp-bigscreen}),
+	  only screen and (max-device-width: #{$bp-bigscreen}) {
+	    @content;
+	  }
+	}
+	@if $point == nexus10 {
+	  @media // Nexus 10 (Landscape)
+	  handheld,
+	  only screen and (max-width: #{$bp-nexus10-max})
+	              and (min-width: #{$bp-ipad-max}) {
+	    @content;
+	  }
+	}
+	@if $point == nexus10-portrait {
+	  @media // Nexus10 (portrait)
+	  handheld,
+	  only screen and (min-device-pixel-ratio: 2),
+	  only screen and (max-width: #{$bp-nexus10-min})
+	              and (orientation: portrait) {
+	    @content;
+	  }
+	}
+	@if $point == ipad-mini {
+	  @media // iPad-Mini (portrait and landscape)
+	  handheld,
+	  only screen and (min-device-pixel-ratio: 1),
+	  only screen and (max-width: #{$bp-ipad-min}){
+	    @content;
+	  }
+	}
+	@if $point == ipad {
+	  @media // iPad (portrait and landscape)
+	  handheld,
+	  only screen and (max-width: #{$bp-ipad-max})
+	              and (min-width: #{$bp-ipad-min}) {
+	    @content;
+	  }
+	}
+	@if $point == ipad-portrait {
+	  @media // iPad (portrait)
+	  handheld,
+	  only screen and (min-device-pixel-ratio: 2),
+	  only screen and (max-width: #{$bp-ipad-min})
+	              and (orientation: portrait) {
+	    @content;
+	  }
+	}
+	@if $point == iphone6-landscape {
+	  @media // iPad (portrait)
+	  handheld,
+	  only screen and (min-device-pixel-ratio: 2),
+	  only screen and (max-width: #{$bp-ipad-min}) {
+	    @content;
+	  }
+	}
+	@if $point == iphone5-landscape {
+	  @media // iPhone 5 (landscape)
+	  handheld,
+	  only screen and (min-device-pixel-ratio: 2),
+	  only screen and (max-width: #{$bp-iphone5-max}) {
+	    @content;
+	  }
+	}
+	@if $point == iphone {
+	  @media // iPhone (portrait and landscape)
+	  handheld,
+	  only screen and (min-device-pixel-ratio: 2),
+	  only screen and (max-width: #{$bp-iphone-max})
+	              and (min-width: #{$bp-iphone-min}) {
+	    @content;
+	  }
+	}
+	@if $point == iphone-portrait {
+	  @media // iPhone (portrait)
+	  handheld,
+	  only screen and (min-device-pixel-ratio: 2),
+	  only screen and (max-width: #{$bp-iphone-min}) {
+	    @content;
+	  }
+	}
+}
