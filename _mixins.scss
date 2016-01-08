@@ -37,6 +37,11 @@
 	@include css3-prefix('animation-delay', $value);
 }
 
+//Animation Timing Function
+@mixin animation-timing-function($value...) {
+	@include css3-prefix('animation-timing-function', $value);
+}
+
 //Backface-Visibility
 @mixin backface-visibility($value) {
 	@include css3-prefix('backface-visibility', $value);
