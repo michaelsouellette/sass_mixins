@@ -94,6 +94,11 @@
     @include css3-prefix('perspective', $value);
 }
 
+//Perspective Origin
+@mixin perspective-origin($value...) {
+    @include css3-prefix('perspective-origin', $value);
+}
+
 //Text Shadow
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
     text-shadow: $x $y $blur $color;
@@ -179,6 +184,9 @@
 	@-moz-keyframes #{$animation-name} {
 		@content;
 	}
+	@-o-keyframes #{$animation-name} {
+	    @content;
+  	}
 	@keyframes #{$animation-name} {
 		@content;
 	}
