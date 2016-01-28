@@ -124,6 +124,16 @@
     @include css3-prefix('transition', $value);
 }
 
+//Transition Delay
+@mixin transition-delay($value...) {
+	@include css3-prefix('transition-delay', $value);
+}
+
+//Transition Duration
+@mixin transition-duration($value...) {
+	@include css3-prefix('transition-duration', $value);
+}
+
 //User Select
 @mixin user-select($value) {
     @include css3-prefix('user-select', $value);
