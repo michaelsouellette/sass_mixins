@@ -134,6 +134,16 @@
 	@include css3-prefix('transition-duration', $value);
 }
 
+//Transition Property
+@mixin transition-property($value...) {
+	@include css3-prefix('transition-property', $value);
+}
+
+//Transition Timing Function
+@mixin transition-timing-function($value...) {
+	@include css3-prefix('transition-timing-function', $value);
+}
+
 //User Select
 @mixin user-select($value) {
     @include css3-prefix('user-select', $value);
