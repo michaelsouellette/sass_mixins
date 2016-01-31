@@ -26,6 +26,26 @@
 	@include css3-prefix('flex-flow', $values);
 }
 
+//Flex Wrap
+@mixin flex-wrap($value) {
+	@include css3-prefix('flex-wrap', $value);
+}
+
+//Align Content
+@mixin align-content($value) {
+	@include css3-prefix('align-content', $value);
+}
+
+//Align Items
+@mixin align-items($value) {
+	@include css3-prefix('align-items', $value);
+}
+
+//Align Self
+@mixin align-self($value) {
+	@include css3-prefix('align-self', $value);
+}
+
 //Flex Justify Content
 @mixin justify-content($values) {
 	@include css3-prefix('justify-content', $values);
@@ -38,9 +58,4 @@
 	-ms-flex-order: $val;     
 	-webkit-order: $val;  
 	order: $val;
-}
-
-//Flex Wrap
-@mixin flex-wrap($value) {
-	@include css3-prefix('flex-wrap', $value);
 }

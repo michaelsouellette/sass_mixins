@@ -29,21 +29,6 @@
 	}
 }
 
-//Align Content
-@mixin align-content($value) {
-	@include css3-prefix('align-content', $value);
-}
-
-//Align Items
-@mixin align-items($value) {
-	@include css3-prefix('align-items', $value);
-}
-
-//Align Self
-@mixin align-self($value) {
-	@include css3-prefix('align-self', $value);
-}
-
 //Animation
 @mixin animation($value...) {
 	@include css3-prefix('animation', $value);
