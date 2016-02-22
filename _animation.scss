@@ -1,0 +1,34 @@
+//Animation
+@mixin animation($value...) {
+	@include css3-prefix('animation', $value);
+}
+
+//Animation Delay
+@mixin animation-delay($value...) {
+	@include css3-prefix('animation-delay', $value);
+}
+
+//Animation Duration
+@mixin animation-duration($value...) {
+	@include css3-prefix('animation-duration', $value);
+}
+
+//Animation Fill Mode
+@mixin animation-fill-mode($value...) {
+	@include css3-prefix('animation-fill-mode', $value);
+}
+
+//Animation Iteration Count
+@mixin animation-iteration-count($value...) {
+	@include css3-prefix('animation-iteration-count', $value);
+}
+
+//Animation Name
+@mixin animation-name($value...) {
+	@include css3-prefix('animation-name', $value);
+}
+
+//Animation Timing Function
+@mixin animation-timing-function($value...) {
+	@include css3-prefix('animation-timing-function', $value);
+}

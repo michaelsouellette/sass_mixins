@@ -1,5 +1,6 @@
 @import "responsive";
 @import "flexbox";
+@import "animation";
 
 /// Adds a browser prefix to the property
 /// @param {*} $property Property
@@ -27,36 +28,6 @@
 	@keyframes #{$animation-name} {
 		@content;
 	}
-}
-
-//Animation
-@mixin animation($value...) {
-	@include css3-prefix('animation', $value);
-}
-
-//Animation Delay
-@mixin animation-delay($value...) {
-	@include css3-prefix('animation-delay', $value);
-}
-
-//Animation Duration
-@mixin animation-duration($value...) {
-	@include css3-prefix('animation-duration', $value);
-}
-
-//Animation Fill Mode
-@mixin animation-fill-mode($value...) {
-	@include css3-prefix('animation-fill-mode', $value);
-}
-
-//Animation Name
-@mixin animation-name($value...) {
-	@include css3-prefix('animation-name', $value);
-}
-
-//Animation Timing Function
-@mixin animation-timing-function($value...) {
-	@include css3-prefix('animation-timing-function', $value);
 }
 
 //Backface-Visibility
