@@ -26,6 +26,11 @@
 	@include css3-prefix('flex-flow', $values);
 }
 
+//Flex Grow
+@mixin flex-grow($values) {
+	@include css3-prefix('flex-grow', $values);
+}
+
 //Flex Wrap
 @mixin flex-wrap($value) {
 	@include css3-prefix('flex-wrap', $value);
