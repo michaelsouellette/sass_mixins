@@ -1,3 +1,4 @@
+@import "functions";
 @import "responsive";
 @import "flexbox";
 @import "animation";
@@ -69,12 +70,13 @@
 }
 
 //Linear gradient 
-@mixin linear-gradient($color...) {
-	background: $color;
-	background: -webkit-linear-gradient($color);
-    background: -o-linear-gradient($color);
-    background: -moz-linear-gradient($color);
-    background: linear-gradient($color);
+@mixin linear-gradient($direction, $color...) {
+	background: nth(nth($color, 1), 1);
+	background: -webkit-linear-gradient(legacy-direction($direction), $color);
+    background: -moz-linear-gradient(legacy-direction($direction), $color);
+    background: -ms-linear-gradient(legacy-direction($direction), $color);
+    background: -o-linear-gradient(legacy-direction($direction), $color);
+    background: linear-gradient($direction, $color);
 }
 
 //Perspective
