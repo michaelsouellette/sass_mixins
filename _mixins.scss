@@ -79,6 +79,13 @@
     background: linear-gradient($direction, $color);
 }
 
+//Mask
+@mixin mask($color, $value...) {
+	background: $color;
+	-webkit-mask: $value;
+    mask: $value;
+}
+
 //Perspective
 @mixin perspective($value...) {
     @include css3-prefix('perspective', $value);
