@@ -24,6 +24,7 @@
 }
 
 @mixin the-points($point) {
+	$bp-really-large-screen: 1921px;
 	$bp-large-screen: 1824px;
 	$bp-bigscreen: 1824px;
 	$bp-nexus10-max: 1280px;
@@ -49,10 +50,18 @@
 	// 11. iphone-portrait - to 320px
 	// --------------------
 	// **
+	@if $point == really-large-screen {
+	  @media // Very Large Screens
+	  only screen and (min-width: #{$bp-really-large-screen}),
+	  only screen and (min-device-width: #{$bp-really-large-screen}) {
+	    @content;
+	  }
+	}
 	@if $point == large-screen {
 	  @media // Very Large Screens
 	  only screen and (min-width: #{$bp-large-screen}),
-	  only screen and (min-device-width: #{$bp-large-screen}) {
+	  only screen and (max-device-width: #{$bp-really-large-screen})
+	              and (min-device-width: #{$bp-large-screen}) {
 	    @content;
 	  }
 	}
