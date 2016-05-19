@@ -16,6 +16,11 @@
 	flex: $values;
 }
 
+//Flex Basis
+@mixin flex-basis($value) {
+	@include css3-prefix('flex-basis', $value);
+}
+
 //Flex Direction
 @mixin flex-direction($value) {
 	@include css3-prefix('flex-direction', $value);
@@ -29,6 +34,11 @@
 //Flex Grow
 @mixin flex-grow($values) {
 	@include css3-prefix('flex-grow', $values);
+}
+
+//Flex Shrink
+@mixin flex-shrink($values) {
+	@include css3-prefix('flex-shrink', $values);
 }
 
 //Flex Wrap
