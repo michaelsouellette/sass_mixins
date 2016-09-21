@@ -1,10 +1,18 @@
 //Flex Box
-@mixin flexbox() {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+@mixin flexbox(important: false) {
+	@if important == true {
+		display: -webkit-box !important;
+		display: -moz-box !important;
+		display: -ms-flexbox !important;
+		display: -webkit-flex !important;
+		display: flex !important;
+	} @else {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
 }
 
 //Flex
