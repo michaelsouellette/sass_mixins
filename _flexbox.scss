@@ -1,6 +1,6 @@
 //Flex Box
-@mixin flexbox(isImportant: false) {
-	@if isImportant == true {
+@mixin flexbox($isImportant: false) {
+	@if $isImportant == true {
 		display: -webkit-box !important;
 		display: -moz-box !important;
 		display: -ms-flexbox !important;
