@@ -17,7 +17,7 @@
 //Screen sizes
 @mixin bp($points) {
     @each $point in $points {
-      @include the-points($point){
+      @include the-points($point) {
       	@content
       };
     }

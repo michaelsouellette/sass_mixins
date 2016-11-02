@@ -1,8 +1,11 @@
-@import "functions";
-@import "responsive";
-@import "flexbox";
-@import "animation";
-@import "fontface";
+@import 'functions';
+@import 'responsive';
+@import 'flexbox';
+@import 'animation';
+@import 'fontface';
+
+//Variables
+$black: #000;
 
 /// Adds a browser prefix to the property
 /// @param {*} $property Property
@@ -43,8 +46,8 @@
 }
 
 //Border Radius Seperates --- Deprecated
-@mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
-	@include border-radius($topLeftRadius $topRightRadius $bottomRightRadius $bottomLeftRadius);
+@mixin border-radius-separate($top-left-radius: 5px, $top-right-radius: 5px, $bottom-left-radius: 5px, $bottom-right-radius: 5px) {
+	@include border-radius($top-left-radius $top-right-radius $bottom-right-radius $bottom-left-radius);
 }
 
 //Box Sizing
@@ -57,7 +60,7 @@
 	@include css3-prefix('box-shadow', $shadow-value);
 }
 
-//Linear gradient 
+//Linear gradient
 @mixin linear-gradient($direction, $color...) {
 	background: nth(nth($color, 1), 1);
 	background: -webkit-linear-gradient(legacy-direction($direction), $color);
@@ -85,7 +88,7 @@
 }
 
 //Text Shadow
-@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba($black, .4)) {
     text-shadow: $x $y $blur $color;
 }
 

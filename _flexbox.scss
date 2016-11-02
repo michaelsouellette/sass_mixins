@@ -1,6 +1,6 @@
 //Flex Box
-@mixin flexbox($isImportant: false) {
-	@if $isImportant == true {
+@mixin flexbox($is-important: false) {
+	@if $is-important == true {
 		display: -webkit-box !important;
 		display: -moz-box !important;
 		display: -ms-flexbox !important;
@@ -76,9 +76,9 @@
 
 //Flex Order
 @mixin order($val) {
-	-webkit-box-ordinal-group: $val;  
-	-moz-box-ordinal-group: $val;     
-	-ms-flex-order: $val;     
-	-webkit-order: $val;  
+	-webkit-box-ordinal-group: $val;
+	-moz-box-ordinal-group: $val;
+	-ms-flex-order: $val;
+	-webkit-order: $val;
 	order: $val;
 }

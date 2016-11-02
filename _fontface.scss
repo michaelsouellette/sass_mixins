@@ -1,4 +1,4 @@
-@mixin fontFace($family,$src,$style: normal,$weight: normal, $otf: false) {
+@mixin font-face($family, $src, $style: normal, $weight: normal, $otf: false) {
 	@if $otf == true {
     	@font-face {
 			font-family: $family;
